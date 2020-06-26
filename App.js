@@ -22,13 +22,20 @@ const App = () => {
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName="Inicio"
+          screenOptions={{
+                headerTitleAlign: 'center',
+                headerStyle: {
+                  backgroundColor: '#F4511E'
+                },
+                headerTintColor: 'white',
+                headerTitleStyle: {
+                  fontWeight: 'bold'
+                }
+              }}
         >
           <Stack.Screen 
               name='Inicio'
               component={Inicio}
-              options={{
-                title: 'Componente principal'
-              }}
           />
           <Stack.Screen 
               name='Nosotros'
