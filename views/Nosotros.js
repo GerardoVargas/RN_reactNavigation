@@ -1,10 +1,24 @@
 import React from 'react';
-import { Text } from 'react-native'
+import { Text, StyleSheet, View, Button } from 'react-native'
 
-const Nosotros = () => {
+const Nosotros = ({navigation}) => {
     return ( 
-        <Text>Nosotros</Text>
+        <View style={styles.contenedor}>
+            <Text>Nosotros</Text>
+            <Button 
+                title='Volver'
+                onPress={ () => navigation.goBack() }
+            />
+        </View>
      );
 }
- 
+
+const styles = StyleSheet.create({
+    contenedor: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
+})
+
 export default Nosotros;
